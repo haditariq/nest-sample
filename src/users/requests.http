@@ -1,0 +1,51 @@
+### Create User
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "hadi.tariq02@gmail.com",
+  "password": "password"
+}
+
+### find user by id
+GET http://localhost:3000/auth/1
+
+### find all user by email
+GET http://localhost:3000/auth?email=hadi.tariq02@gmail.com
+
+### Remove user by id
+DELETE http://localhost:3000/auth/2
+
+### update user
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+  "email":"sheikh.ht02@gmail.com",
+  "password": "jhingi"
+}
+
+### signup
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test1@test.com",
+  "password": "12345"
+}
+
+### signin
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "12345"
+}
+
+### Get currently signedin user
+GET http://localhost:3000/auth/whoami
+
+
+### Get currently signedin user
+GET http://localhost:3000/auth/signout
